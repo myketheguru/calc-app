@@ -1,6 +1,6 @@
 # Basic Calculator UI built with HTML/CSS/JAVASCRIPT
 
-## Open to collaboration
+## Open to collaboration 😎👀✔❤
 
 ### TODO:
 
