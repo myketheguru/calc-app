@@ -1,0 +1,377 @@
+body {
+  max-height: 100vh;
+  background-color: #141414;
+  user-select: none;
+}
+
+#iphone {
+  max-width: 395px;
+  height: 812px;
+  margin: auto;
+  margin-top: 50px;
+  background-image: url("../images/phone-frame-mobile-phone-hd-png-download.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#launch {
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+
+#launch .logo {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.launch-in {
+  animation: launchIn 0.8s linear forwards;
+}
+
+.launch-out {
+  animation: launchOut 0.8s linear forwards;
+}
+
+@keyframes launchIn {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes launchOut {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-812px);
+  }
+}
+
+#calc-app {
+  background-color: var(--calc-default-bg);
+  height: 89.5%;
+  width: 85.2%;
+  position: relative;
+  top: -2px;
+  right: -1px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 0.4fr 0.6fr;
+  overflow: hidden;
+  color: var(--calc-default-color);
+  opacity: 0;
+  transform: translateY(-150%);
+}
+
+.top {
+  background-color: var(--calc-top);
+  user-select: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 30px;
+}
+
+#menu,
+.close {
+  cursor: pointer;
+}
+
+#menu:hover > .bar:nth-child(1) {
+  animation: bottomMenuBar 0.5s;
+}
+
+#menu:hover > .bar:nth-child(3) {
+  animation: topMenuBar 0.5s;
+}
+
+header #menu .bar {
+  width: 18px;
+  height: 2px;
+  background-color: var(--calc-default-color);
+  margin: 3px;
+  position: relative;
+}
+
+header #menu .bar:not(:nth-child(2)) {
+  width: 14px;
+}
+
+header #menu .bar:nth-child(1) {
+  left: 5px;
+  animation: topMenuBar 0.5s;
+}
+
+header #menu .bar:nth-child(3) {
+  left: 1px;
+  animation: bottomMenuBar 0.5s;
+}
+
+@keyframes topMenuBar {
+  0% {
+    left: -5px;
+  }
+  50% {
+    left: 19px;
+  }
+  100% {
+    left: 5px;
+  }
+}
+
+@keyframes bottomMenuBar {
+  0% {
+    left: 19px;
+  }
+  50% {
+    left: -5px;
+  }
+  100% {
+    left: 1px;
+  }
+}
+
+.close .bar {
+  width: 18px;
+  height: 2px;
+  background-color: var(--calc-default-color);
+  position: relative;
+}
+
+.close .bar:nth-child(1) {
+  transform: rotate(45deg) translate(1px);
+  animation: animateWidth 0.5s;
+}
+
+.close .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(2px);
+  animation: animateWidth 0.5s 0.2s;
+}
+
+@keyframes animateWidth {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 18px;
+  }
+}
+
+.close:hover > .bar {
+  animation: animateWidth 0.5s;
+}
+
+.logo span {
+  color: var(--calc-red);
+  margin-left: 1px;
+}
+
+#display {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  height: calc(290.69px - 91.28px);
+}
+
+#expression-box {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 16px;
+  color: var(--calc-grey);
+  letter-spacing: 3px;
+}
+
+#expression-box span {
+  color: var(--calc-red);
+  position: relative;
+  /* top: 5px; */
+}
+
+#result-box {
+  font-size: 40px;
+}
+
+.pad {
+  background-color: var(--calc-pad);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10%;
+}
+
+.pad .pad-unit {
+  /* Specific style*/
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pad .pad-unit:hover {
+  background-color: var(--calc-pad-unit-bg-color-hover);
+  border: 2px solid var(--calc-pad-unit-border-color-hover);
+}
+
+.pad-unit.operator {
+  color: var(--calc-red);
+}
+
+.pad-unit.grey-color {
+  color: var(--calc-grey);
+}
+
+.pad-unit.equals {
+  font-weight: bold;
+  background-color: var(--calc-equals-btn-bg);
+  color: var(--calc-equals-btn-color);
+  border: 3px solid var(--calc-equals-btn-border);
+}
+
+.pad-unit.equals:hover {
+  background-color: var(--calc-equals-btn-bg-hover);
+  border: 3px solid var(--calc-equals-btn-border-hover);
+}
+
+#navigation-panel {
+  position: absolute;
+  height: 290.69px;
+  width: 100%;
+  background-color: var(--calc-top);
+  display: grid;
+  text-align: center;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.move-out {
+  animation: moveOut 0.8s forwards;
+}
+
+.move-in {
+  animation: moveIn 0.8s forwards;
+}
+
+#navigation-panel > * {
+  border-bottom: 1px solid var(--calc-nav-panel-border);
+  padding: 20px;
+  cursor: pointer;
+}
+
+#navigation-panel footer button {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  background-color: var(--calc-pad-unit-bg-color-hover);
+  color: var(--calc-default-color);
+  border: 5px solid var(--calc-pad-unit-border-color-hover);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#navigation-panel p {
+  font-size: 10px;
+}
+
+@keyframes moveOut {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+#history-panel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--calc-top);
+  display: grid;
+  text-align: center;
+  padding-top: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+#history-panel::-webkit-scrollbar {
+  background: transparent;
+}
+
+.history {
+  width: 100%;
+  height: 100%;
+}
+
+.history p {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close-history {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-history .bar {
+  width: 18px;
+  height: 2px;
+  background-color: var(--calc-default-color);
+  position: relative;
+}
+
+.close-history .bar:nth-child(1) {
+  transform: rotate(45deg) translate(1px);
+  animation: animateWidth 0.5s;
+}
+
+.close-history .bar:nth-child(2) {
+  transform: rotate(-45deg) translate(2px);
+  animation: animateWidth 0.5s 0.2s;
+}
+
+@keyframes animateWidth {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 18px;
+  }
+}

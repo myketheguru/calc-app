@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc. | Welcome</title>
+    <link id="skin" rel="stylesheet" href="./css/theme/dark.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="iphone">
+        <div id="launch">
+            <img src="./images/brain-logo.png" alt="logo" width="60">
+            <div class="logo">Calc<span>.</span></div>
+            <p>Click to launch</p>
+        </div>
+        <div id="calc-app">
+            <div class="top">
+                <header>
+                    <!-- Menu Bar -->
+                    <div id="menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="logo">Calc<span>.</span></div>
+
+                    <!-- Close icon -->
+                    <div class="close">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </header>
+
+                <div id="display">
+                    <p id="expression-box"></p>
+                    <h1 id="result-box"></h1>
+                </div>
+            </div>
+            <div class="pad">
+                <div class="pad-unit grey-color">C</div>
+                <div class="pad-unit grey-color">+/-</div>
+                <div class="pad-unit grey-color">%</div>
+                <div class="pad-unit operator">/</div>
+                <div class="pad-unit num">7</div>
+                <div class="pad-unit num">8</div>
+                <div class="pad-unit num">9</div>
+                <div class="pad-unit operator">*</div>
+                <div class="pad-unit num">4</div>
+                <div class="pad-unit num">5</div>
+                <div class="pad-unit num">6</div>
+                <div class="pad-unit operator">+</div>
+                <div class="pad-unit num">1</div>
+                <div class="pad-unit num">2</div>
+                <div class="pad-unit num">3</div>
+                <div class="pad-unit operator">-</div>
+                <div class="pad-unit num grey-color">00</div>
+                <div class="pad-unit num">0</div>
+                <div class="pad-unit num grey-color">.</div>
+                <div class="pad-unit equals">=</div>
+            </div>
+
+            <!-- Modals below -->
+            <div id="navigation-panel">
+                <!-- Logo -->
+                <div class="logo">Calc<span>.</span></div>
+                <!-- Content -->
+                <div class="history-btn">Calculation History</div>
+                <div class="mode">Light/Dark mode</div>
+                <footer>
+                    <button id="close-panel">Close</button>
+                    <p>2021. All rights reserved.</p>
+                </footer>
+            </div>
+            <!-- -------------------- -->
+            <div id="history-panel">
+                 <!-- Close icon -->
+                 <div class="close-history">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <h2>Your History</h2>
+                <div class="history"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Script Below -->
+    <script src="./js/calc.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+:root {
+  --calc-default-bg: #171718;
+  --calc-default-color: #fff;
+  --calc-top: #151515;
+  --calc-red: #ff3e39;
+  --calc-grey: #575656;
+  --calc-pad: #1a1a1a;
+  --calc-pad-unit-bg-color-hover: #303030;
+  --calc-pad-unit-border-color-hover: #3d3d3d;
+  --calc-equals-btn-bg: #ff3e39;
+  --calc-equals-btn-color: #fff;
+  --calc-equals-btn-border: #982e2a;
+  --calc-equals-btn-bg-hover: #fa4842;
+  --calc-equals-btn-border-hover: #9e3430;
+  --calc-nav-panel-border: #353434;
+}
